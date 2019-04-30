@@ -1,1 +1,1 @@
-A simple mediaplayer built using JavaFX's MediaPlayer class.
+A simple mediaplayer built using the Swing framework's Player class.

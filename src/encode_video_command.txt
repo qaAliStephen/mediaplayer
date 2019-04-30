@@ -1,0 +1,1 @@
+ffmpeg -i ../media/another_movie.mov -vcodec mjpeg -acodec pcm_s16be -ac 2 -y ../media/another_movie_2.mov
