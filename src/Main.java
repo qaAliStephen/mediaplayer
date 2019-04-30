@@ -28,17 +28,14 @@ class QAMediaPlayer {
     public static final short PLAYER_WIDTH = 640;
     public static final short PLAYER_HEIGHT = 480;
     JFrame jframe;
-    JPanel controls_pnl;
     JDesktopPane jdp;
     PlayerFrame pf;
     public QAMediaPlayer(){
         jframe = new JFrame("QAMediaPlayer");
         jdp = new JDesktopPane();
         pf = new PlayerFrame();
-        controls_pnl = new JPanel();
         jframe.add(jdp);
         jdp.add(pf);
-        jframe.add(controls_pnl, BorderLayout.SOUTH);
         jframe.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setVisible(true);
