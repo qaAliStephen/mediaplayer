@@ -51,6 +51,8 @@ class QAMediaPlayer implements ActionListener, ControllerListener {
         playbackPanel.setLayout(new FlowLayout());
         playbackPanel.add(playBtn);
         playbackPanel.add(stopBtn);
+        playBtn.addActionListener(this);
+        stopBtn.addActionListener(this);
         jframe.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setVisible(true);
@@ -67,6 +69,10 @@ class QAMediaPlayer implements ActionListener, ControllerListener {
             }
         } else if(e.getSource() == exit){
             System.exit(0);
+        } else if(e.getSource() == playBtn){
+            if(player != null) player.start();
+        } else if(e.getSource() == stopBtn){
+            if(player != null) player.stop();
         }
     }
 
